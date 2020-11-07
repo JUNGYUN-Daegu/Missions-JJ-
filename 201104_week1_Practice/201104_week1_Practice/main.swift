@@ -143,34 +143,48 @@ printReverse(lines: 4)
 
 //MARK: - printDiamond()
 
+//func printDiamond(max: Int) {
+//    var myInt1 = 0
+//
+//    for i in stride(from: 0, to: max, by: 2) {
+//        for _ in myInt1..<max/2 {
+//            print(" ", terminator: "")
+//        }
+//
+//        for _ in 0...i {
+//            print("*", terminator: "")
+//        }
+//        print("\n")
+//
+//        myInt1 += 1
+//    }
+//    for i in stride(from: 2, to: max, by: 2) {
+//        for _ in 0..<i/2 {
+//            print(" ", terminator: "")
+//        }
+//        for _ in i..<max {
+//            print("*", terminator: "")
+//        }
+//        print("\n")
+//    }
+//    print("----------")
+//}
+
 func printDiamond(max: Int) {
-    var myInt1 = 0
+    let middle = (max + 1) / 2
     
-    for i in stride(from: 0, to: max, by: 2) {
-        for _ in myInt1..<max/2 {
-            print(" ", terminator: "")
+    for line in 1...max {
+        if line <= middle {
+            print(String(repeating: " ", count: middle - line), String(repeating: "*", count: (line * 2) - 1), terminator: " ")
+        } else {
+            print(String(repeating: " ", count: line - (max/2 + 1)), String(repeating: "*", count: (max * 2) - (line * 2) + 1), terminator: " ")
         }
-        
-        for _ in 0...i {
-            print("*", terminator: "")
-        }
-        print("\n")
-        
-        myInt1 += 1
+        print()
     }
-    for i in stride(from: 2, to: max, by: 2) {
-        for _ in 0..<i/2 {
-            print(" ", terminator: "")
-        }
-        for _ in i..<max {
-            print("*", terminator: "")
-        }
-        print("\n")
-    }
-    print("----------")
+    
 }
 
-printDiamond(max: 7)
+printDiamond(max: 6)
 
 //MARK: - print3515()
 
