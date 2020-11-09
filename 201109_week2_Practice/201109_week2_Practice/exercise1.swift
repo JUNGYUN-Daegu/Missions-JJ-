@@ -33,3 +33,27 @@ struct ArrayPractice {
         }
     }
 }
+
+
+//MARK: - Mission 2
+
+func setBullArray() -> Array<Array<Bool>> {
+    let tempWidthAndHeightOfArray = 9
+    let innerArray: Array<Bool> = Array(repeating: false, count: tempWidthAndHeightOfArray)
+    let outerArray: Array<Array<Bool>> = Array(repeating: innerArray, count: tempWidthAndHeightOfArray)
+    
+    return outerArray
+}
+    
+func printArray(array: Array<Array<Bool>>, newChar: Character) {
+    var myBullArray = array
+    
+    for row in 0..<myBullArray.count {
+        for column in 0..<myBullArray[row].count {
+            if  myBullArray[row].count - (column + 1) <= row {
+                myBullArray[row][column] = true
+            }
+        }
+        print(myBullArray[row].map { $0 == true ? "$" : " "})
+    }
+}
