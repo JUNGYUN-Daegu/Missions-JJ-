@@ -11,3 +11,5 @@ var myArray = ArrayPractice()
 myArray.printArray(array:myArray.fillArray())
 
 printArray(array: setBullArray(), newChar: "%")
+
+printMagicSquare(makeMagicSquare(row: 5))

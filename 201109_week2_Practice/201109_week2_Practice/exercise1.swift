@@ -57,3 +57,62 @@ func printArray(array: Array<Array<Bool>>, newChar: Character) {
         print(myBullArray[row].map { $0 == true ? "$" : " "})
     }
 }
+
+//MARK: - Mission 3 Magic square
+
+func makeMagicSquare(row:Int) -> Array<Array<Int>> {
+    var magicSquare: Array<Array<Int>> = Array(repeating: Array(repeating: 0, count: row), count: row)
+    
+    //후에 쓸 2차 배열 XY좌표의 최대 값을 특정
+    let endCoordinateOfSquare = row - 1
+    
+    //마방진의 마지막 row 중간에 정수 1 고정
+    var originalYCoordinate = endCoordinateOfSquare
+    var originalXCoordinate = row/2
+    
+    magicSquare[originalYCoordinate][originalXCoordinate] = 1
+    
+    var nextYCoordinate = 0
+    var nextXCoordinate = 0
+    
+    for nextInt in 2...row * row {
+        
+        //다음 숫자가 들어갈 좌표를 특정한다.
+        if originalYCoordinate < endCoordinateOfSquare {
+            nextYCoordinate = originalYCoordinate + 1
+        } else {
+            nextYCoordinate = 0
+        }
+        
+        if originalXCoordinate < endCoordinateOfSquare {
+            nextXCoordinate = originalXCoordinate + 1
+        } else {
+            nextXCoordinate = 0
+        }
+        
+        //위에서 특정한 좌표에 이미 값이 있는지 확인한 다음 값이 이미 있다면 그에 따른 다음 좌표를 재지정
+        if magicSquare[nextYCoordinate][nextXCoordinate] == 0 {
+            magicSquare[nextYCoordinate][nextXCoordinate] = nextInt
+            
+            //nextInt를 기입했다면 original좌표들을 재설정
+            originalYCoordinate = nextYCoordinate
+            originalXCoordinate = nextXCoordinate
+        } else {
+            nextYCoordinate = originalYCoordinate - 1
+            nextXCoordinate = originalXCoordinate
+            
+            magicSquare[nextYCoordinate][nextXCoordinate] = nextInt
+            
+            originalYCoordinate = nextYCoordinate
+            originalXCoordinate = nextXCoordinate
+        }
+    }
+    return magicSquare
+}
+
+func printMagicSquare(_ myMagicSquare:Array<Array<Int>>) {
+    for row in myMagicSquare {
+        print(row)
+    }
+}
+
