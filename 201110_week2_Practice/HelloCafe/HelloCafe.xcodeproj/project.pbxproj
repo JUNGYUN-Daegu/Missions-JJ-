@@ -13,6 +13,8 @@
 		8812D60A255A70BA00958D3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8812D608255A70BA00958D3F /* Main.storyboard */; };
 		8812D60C255A70BD00958D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8812D60B255A70BD00958D3F /* Assets.xcassets */; };
 		8812D60F255A70BD00958D3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8812D60D255A70BD00958D3F /* LaunchScreen.storyboard */; };
+		8812D618255A8DC000958D3F /* green-tea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8812D617255A8DC000958D3F /* green-tea.jpg */; };
+		8812D61B255A8DCF00958D3F /* cafe-latte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8812D61A255A8DCF00958D3F /* cafe-latte.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8812D60B255A70BD00958D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8812D60E255A70BD00958D3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8812D610255A70BD00958D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8812D617255A8DC000958D3F /* green-tea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "green-tea.jpg"; sourceTree = "<group>"; };
+		8812D61A255A8DCF00958D3F /* cafe-latte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cafe-latte.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				8812D606255A70BA00958D3F /* ViewController.swift */,
 				8812D608255A70BA00958D3F /* Main.storyboard */,
 				8812D60B255A70BD00958D3F /* Assets.xcassets */,
+				8812D617255A8DC000958D3F /* green-tea.jpg */,
+				8812D61A255A8DCF00958D3F /* cafe-latte.jpg */,
 				8812D60D255A70BD00958D3F /* LaunchScreen.storyboard */,
 				8812D610255A70BD00958D3F /* Info.plist */,
 			);
@@ -124,7 +130,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8812D618255A8DC000958D3F /* green-tea.jpg in Resources */,
 				8812D60F255A70BD00958D3F /* LaunchScreen.storyboard in Resources */,
+				8812D61B255A8DCF00958D3F /* cafe-latte.jpg in Resources */,
 				8812D60C255A70BD00958D3F /* Assets.xcassets in Resources */,
 				8812D60A255A70BA00958D3F /* Main.storyboard in Resources */,
 			);
