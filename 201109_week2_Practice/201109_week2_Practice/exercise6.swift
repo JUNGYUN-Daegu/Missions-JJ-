@@ -8,18 +8,19 @@
 import Foundation
 
 func duplicatedWords(inputWords: Array<String>) -> Array<String> {
-    var result: Array<String> = []
-    var tempArray: Array<String> = []
-    
+    var myDictionary: [String : Int] = [:]
+
     for word in inputWords {
-        if tempArray.contains(word) {
-            if result.contains(word) == false {
-                result.append(word)
-            }
-        } else {
-            tempArray.append(word)
-        }
+        myDictionary[word] = myDictionary.keys.contains(word) ? myDictionary[word]! + 1 : 1
     }
-    return result
+    
+    return Array(myDictionary.filter({ (key, value) -> Bool in
+        value > 1
+    }).keys)
+    
+    //BELOW is more simplified way to use the filter method.
+    //return Array(myDictionary.filter { $0.value > 1}.keys)
+    
+    //or you can simply use Dictionary(grouping: ...) Initializer
 }
 
