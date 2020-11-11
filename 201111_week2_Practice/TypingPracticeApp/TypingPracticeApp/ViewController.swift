@@ -47,4 +47,7 @@ class ViewController: UIViewController {
         }
     }
 }
+//MARK:- Additional Mission
 
+//흰 배경을 터치하면 보였던 소프트 키보드가 사라진다.
+//틀렸을 때 Label에 글자색을 red로 표시한다. 맞추면 다시 black으로 변경한다.
