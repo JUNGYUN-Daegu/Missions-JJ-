@@ -38,6 +38,7 @@ struct NumberBaseballGameManager {
         return result
     }
     
+//FIXME:- how to implement this function in main swift file?
     mutating func showGameScore() -> Bool {
         newGame()
         print(answer)
