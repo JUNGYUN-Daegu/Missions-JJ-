@@ -47,6 +47,8 @@ class ViewController: UIViewController {
         }
     }
     
+//FIXME:- create logic by myself
+//Currently, the passwordValidator logic is from Ted's. I will redo it as soon as possible (감사합니다)
     func passwordValidator(password: String) -> Int {
         var levelCheck = [false, // password long enough
                               false, // contains number
@@ -82,4 +84,6 @@ class ViewController: UIViewController {
             }
     }
 }
-
+//MARK:- Additional Mission
+//아주 강한 암호를 랜덤으로 만들어서 추천해주려면?
+//버튼을 누를 때 마다가 아니라 비밀번호를 입력할 때마다 하려면 어떻게 해야할까?
