@@ -11,9 +11,15 @@ struct NumberBaseballGameManager {
     var answer: Array<Int> = []
     
     mutating func newGame() {
-        for _ in 0...2 {
-            answer.append(Int.random(in: 1...9))
-        }
+        repeat {
+            let randomNumber = Int.random(in: 1...9)
+            
+            if answer.contains(randomNumber) {
+                continue
+            } else {
+                answer.append(randomNumber)
+            }
+        } while (answer.count != 3)
     }
 
     func hit(num: Int) -> (strikeCount: Int, ballCount: Int) {
