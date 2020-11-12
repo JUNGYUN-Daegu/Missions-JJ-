@@ -13,7 +13,7 @@ func testInterest(unitDay: Int) -> Double {
     let principal = 1_000_000
     var totalAmount: Double = 0
     
-    for interval in stride(from: 0, to: 401, by: unitDay) {
+    for interval in stride(from: 0, through: 365, by: unitDay) {
         totalAmount = interestRateManager.calculateAmount(day: interval, amount: principal)
         print(interval)
         print(round(totalAmount))
@@ -22,4 +22,4 @@ func testInterest(unitDay: Int) -> Double {
 }
 
 //How to use the return of "testInterest" function to keep track of balance records?
-testInterest(unitDay: 10)
+_ = testInterest(unitDay: 5)

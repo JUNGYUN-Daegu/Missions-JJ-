@@ -11,10 +11,11 @@ import Foundation
 struct InterestRateManager {
     func getInterestRate(byDay: Int) -> Double {
         switch byDay {
-        case 1...90: return 0.005
+        case ...90: return 0.005
         case 91...180: return 0.01
         case 181...364: return 0.02
-        default: return 0.056
+        case 365...: return 0.056
+        default: return 0.0
         }
     }
     
