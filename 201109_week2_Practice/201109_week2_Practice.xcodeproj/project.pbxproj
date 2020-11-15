@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8812D620255B692500958D3F /* exercise3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812D61F255B692500958D3F /* exercise3.swift */; };
+		8823557725614ADC00516A4B /* exercise4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8823557625614ADC00516A4B /* exercise4.swift */; };
 		8866843F2558D0F000937B4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866843E2558D0F000937B4C /* main.swift */; };
 		886684472558D16100937B4C /* exercise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886684462558D16100937B4C /* exercise1.swift */; };
 		8866844A2558E6F600937B4C /* exercise2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886684492558E6F600937B4C /* exercise2.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		8812D61F255B692500958D3F /* exercise3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise3.swift; sourceTree = "<group>"; };
+		8823557625614ADC00516A4B /* exercise4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise4.swift; sourceTree = "<group>"; };
 		8866843B2558D0F000937B4C /* 201109_week2_Practice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 201109_week2_Practice; sourceTree = BUILT_PRODUCTS_DIR; };
 		8866843E2558D0F000937B4C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		886684462558D16100937B4C /* exercise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise1.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				886684462558D16100937B4C /* exercise1.swift */,
 				886684492558E6F600937B4C /* exercise2.swift */,
 				8812D61F255B692500958D3F /* exercise3.swift */,
+				8823557625614ADC00516A4B /* exercise4.swift */,
 				8866844C2559365D00937B4C /* exercise5.swift */,
 				8866844F2559768600937B4C /* exercise6.swift */,
 			);
@@ -139,6 +142,7 @@
 				886684502559768600937B4C /* exercise6.swift in Sources */,
 				886684472558D16100937B4C /* exercise1.swift in Sources */,
 				8866844A2558E6F600937B4C /* exercise2.swift in Sources */,
+				8823557725614ADC00516A4B /* exercise4.swift in Sources */,
 				8866844D2559365D00937B4C /* exercise5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

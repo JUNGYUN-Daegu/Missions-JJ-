@@ -18,15 +18,20 @@ import Foundation
 //MARK:- EXERCISE 2
 //print(IDValidator())
 
-
 //MARK:- EXERCISE 3
-print("Your Password's level is : \(passwordValidator(password: "a;lskdfj123+"))")
+//print("Your Password's level is : \(passwordValidator(password: "a;lskdfj123+"))")
+
+//MARK:- EXERCISE 4
+if validResidentRegistrationNumber() == true {
+    print("Valid ID")
+} else {
+    print("False ID")
+}
+
+//MARK:- EXERCISE 5
+
 
 //MARK:- EXERCISE 6
-
-
 //let myDuplicatedWords = duplicatedWords(inputWords: ["가을", "너굴", "우주", "겨울", "봄봄", "여울","여울","여울","여울"])
-//
+
 //print(myDuplicatedWords)
-//
-//print(antFunction(inputArray: [1], numberOfLines: 9))
