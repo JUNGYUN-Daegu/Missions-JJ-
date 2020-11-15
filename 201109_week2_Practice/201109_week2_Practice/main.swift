@@ -6,10 +6,27 @@
 //
 
 import Foundation
+//MARK:- EXERCISE 1
+//var myArray = ArrayPractice()
+//myArray.printArray(array:myArray.fillArray())
+//
+//printArray(array: setBullArray(), newChar: "%")
+//
+//printMagicSquare(makeMagicSquare(row: 5))
 
-var myArray = ArrayPractice()
-myArray.printArray(array:myArray.fillArray())
 
-printArray(array: setBullArray(), newChar: "%")
+//MARK:- EXERCISE 2
+//print(IDValidator())
 
-printMagicSquare(makeMagicSquare(row: 5))
+
+//MARK:- EXERCISE 3
+print("Your Password's level is : \(passwordValidator(password: "a;lskdfj123+"))")
+
+//MARK:- EXERCISE 6
+
+
+//let myDuplicatedWords = duplicatedWords(inputWords: ["가을", "너굴", "우주", "겨울", "봄봄", "여울","여울","여울","여울"])
+//
+//print(myDuplicatedWords)
+//
+//print(antFunction(inputArray: [1], numberOfLines: 9))
