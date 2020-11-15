@@ -7,7 +7,7 @@
 
 import Foundation
 
-func IDValidator() {
+func IDValidator() -> Bool {
     print(
 """
 ID를 입력하세요:
@@ -18,28 +18,52 @@ ID를 입력하세요:
 위 조건을 모두 통과하면 성공
 """
     )
+    var result = true
+    let userInput = readLine() ?? ""
+    let regex1 = try! NSRegularExpression(pattern: "[a-z0-9-]{6,23}", options: .caseInsensitive)
     
-    guard let input = readLine() else {
-        return
+    if regex1.matches(userInput) == false {
+        result = false
+    } else {
+        let componentsInUserInput = userInput.components(separatedBy: CharacterSet.decimalDigits.inverted)
+        
+        for element in componentsInUserInput {
+            if let number = Int(element) {
+                if (number % 100 / 10) == (number / 100 + 1) && (number % 10) == (number % 100 / 10 + 1) {
+                    result = false
+                } else if (number % 100 / 10) == (number / 100) && (number % 10) == (number % 100 / 10) {
+                    result = false
+                }
+            }
+        }
     }
-    
-    //NSRegularExpression을 이용해서 간단한 Regular Expression의 성공, 실패 여부 판단은 성공했으나 복잡한 조건 짜는 법을 모르겠음
-    do {
-        let range = NSRange(location: 0, length: input.count)
-        let regex = try NSRegularExpression(pattern: "[A-Za-z0-9]")
-        
-        let result = regex.matches(in: input, options: [], range: range).map{
-            String(input[Range($0.range, in: input)!])
-        }
-        
-        //조건에 맞지 않는 input을 입력받으면 []을 반환하는 것에 착안
-        if result != [] {
-            print("성공")
-        } else {
-            print("실패")
-        }
-        
-    } catch {
-        print("regex Error")
+  
+  return result
+}
+
+extension NSRegularExpression {
+    func matches(_ string: String) -> Bool {
+        // location: starting point of range, length: how many times you want to check each of elements
+        let range = NSRange(location: 0, length: string.utf16.count)
+        return firstMatch(in: string, options: [], range: range) != nil
     }
 }
+
+
+//FIXME:- 실패한 코드들
+    
+//    let charSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-")
+//
+////    for letter in userInput {
+////        if charSet.contains(letter.unicodeScalars.map { $0.value }.reduce(0, +1)) {
+////
+////        }
+////    }
+//
+//
+//    if userInput.count < 5 && userInput.count >= 24 {
+//        return false
+//    } else if userInput.ran {
+//
+//    }
+
