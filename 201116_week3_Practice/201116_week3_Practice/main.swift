@@ -18,6 +18,8 @@ import Foundation
 //print("\(multipliedMatrix.a) | \(multipliedMatrix.b)\n\(multipliedMatrix.c) | \(multipliedMatrix.d)")
 
 //MARK:- EXERCISE 2
-var mySpecialBinaryNumber = SpecialBinaryNumber(with: 5)
-print(mySpecialBinaryNumber.count)
-print(mySpecialBinaryNumber.find(by: 3))
+//var mySpecialBinaryNumber = SpecialBinaryNumber(with: 5)
+//print(mySpecialBinaryNumber.count)
+//print(mySpecialBinaryNumber.find(by: 3))
+
+//MARK:- EXERCISE 3
