@@ -30,7 +30,7 @@ class Matrix {
         let summedC = c + other.c
         let summedD = d + other.d
         
-        // putting a += other.a directly to the argument did not work
+        // putting 'a += other.a' directly to the argument place did not work
         return Matrix(a: summedA, b: summedB, c: summedC, d: summedD)
     }
     
