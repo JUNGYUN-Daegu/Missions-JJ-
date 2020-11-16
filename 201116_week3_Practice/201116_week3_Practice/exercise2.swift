@@ -7,7 +7,6 @@
 
 import Foundation
 
-//FIXME:- how to make all the binary numbers have 5 digits?
 //Binary Number Structure
 struct SpecialBinaryNumber {
     private var valueArray: Array<String> = []
@@ -26,7 +25,15 @@ struct SpecialBinaryNumber {
             let randomNumber: Int = Int.random(in: 0...maxInt)
             // radix?
             let binaryString = String(randomNumber, radix: 2)
-            valueArray.append(binaryString)
+            
+            // padding the binaryString to make all have 5 digits
+            var padded = binaryString
+            
+            for _ in 0..<(total - binaryString.count) {
+                padded = "0" + padded
+            }
+            
+            valueArray.append(padded)
         }
     }
     
