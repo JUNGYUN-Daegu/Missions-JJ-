@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Waiting_List_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xny-g4-a3v">
+                                <rect key="frame" x="0.0" y="54" width="414" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 대기 인원" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiO-Wm-eg0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0Mg-zp-d4x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumOfPeople" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REs-MI-CBN">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="S7c-jd-UoR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CjS-jl-8LT">
+                                <rect key="frame" x="20" y="325" width="374" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfV-eU-QfB">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <state key="normal" title="대기">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="waitBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZF-5o-zCP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW8-Va-Iwi">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="완료">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="completeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8l-Oa-g8n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jnw-v1-bvI">
+                                <rect key="frame" x="41.5" y="245" width="331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="juU-pd-OKe"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xny-g4-a3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8wn-8A-Z60"/>
+                            <constraint firstItem="xny-g4-a3v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="L0h-aF-lbB"/>
+                            <constraint firstItem="CjS-jl-8LT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LNy-FL-uqm"/>
+                            <constraint firstItem="Jnw-v1-bvI" firstAttribute="top" secondItem="xny-g4-a3v" secondAttribute="bottom" constant="20" id="MbD-5b-pWP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xny-g4-a3v" secondAttribute="trailing" id="Ywp-oo-x1A"/>
+                            <constraint firstItem="Jnw-v1-bvI" firstAttribute="centerX" secondItem="xny-g4-a3v" secondAttribute="centerX" id="bar-9L-yBu"/>
+                            <constraint firstItem="Jnw-v1-bvI" firstAttribute="centerX" secondItem="xny-g4-a3v" secondAttribute="centerX" id="kn8-Ey-aqE"/>
+                            <constraint firstItem="CjS-jl-8LT" firstAttribute="top" secondItem="Jnw-v1-bvI" secondAttribute="bottom" constant="30" id="l19-zd-8aD"/>
+                            <constraint firstItem="Jnw-v1-bvI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="m4F-Fo-Tb8"/>
+                            <constraint firstItem="CjS-jl-8LT" firstAttribute="centerX" secondItem="xny-g4-a3v" secondAttribute="centerX" id="oyo-4v-K1B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CjS-jl-8LT" secondAttribute="trailing" constant="20" id="whD-sf-KOI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NumberOfPeopleWaitingLbl" destination="REs-MI-CBN" id="NMq-SF-3pu"/>
+                        <outlet property="completeBtnStatus" destination="oW8-Va-Iwi" id="uwJ-ns-dtF"/>
+                        <outlet property="progressBar" destination="Jnw-v1-bvI" id="EZu-sO-BaY"/>
+                        <outlet property="waitBtnStatus" destination="xfV-eU-QfB" id="419-za-0jW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="686" y="80"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

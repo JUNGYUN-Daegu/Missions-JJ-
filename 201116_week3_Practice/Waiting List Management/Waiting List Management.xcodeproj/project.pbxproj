@@ -13,6 +13,7 @@
 		8873049B256262530079DDDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88730499256262530079DDDD /* Main.storyboard */; };
 		8873049D256262550079DDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8873049C256262550079DDDD /* Assets.xcassets */; };
 		887304A0256262550079DDDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873049E256262550079DDDD /* LaunchScreen.storyboard */; };
+		887304A925626CFE0079DDDD /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887304A825626CFE0079DDDD /* ListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8873049C256262550079DDDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8873049F256262550079DDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		887304A1256262550079DDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		887304A825626CFE0079DDDD /* ListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				88730493256262530079DDDD /* AppDelegate.swift */,
 				88730495256262530079DDDD /* SceneDelegate.swift */,
+				887304A825626CFE0079DDDD /* ListManager.swift */,
 				88730497256262530079DDDD /* ViewController.swift */,
 				88730499256262530079DDDD /* Main.storyboard */,
 				8873049C256262550079DDDD /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 				88730498256262530079DDDD /* ViewController.swift in Sources */,
 				88730494256262530079DDDD /* AppDelegate.swift in Sources */,
 				88730496256262530079DDDD /* SceneDelegate.swift in Sources */,
+				887304A925626CFE0079DDDD /* ListManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
