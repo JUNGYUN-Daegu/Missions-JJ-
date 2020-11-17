@@ -16,23 +16,21 @@ struct SpecialBinaryNumber {
     }
     
     init(with total: Int) {
-        for _ in 1...50 {
-            // if binary code is 5 digits, the max value of it in decimal is 2^5 - 1.
-            let maxValue = pow(2, total) - 1
-            // putting maxValue(decimal) into NSDecimalNumber so that later it can be type casted into Int?
-            let valueDecimal = NSDecimalNumber(decimal: maxValue)
-            let maxInt = Int(truncating: valueDecimal)
-            let randomNumber: Int = Int.random(in: 0...maxInt)
+        // if binary code is 5 digits, the max value of it in decimal is 2^5 - 1.
+        let maxValue = pow(2, total) - 1
+        // putting maxValue(decimal) into NSDecimalNumber so that later it can be type casted into Int?
+        let valueDecimal = NSDecimalNumber(decimal: maxValue)
+        let maxInt = Int(truncating: valueDecimal)
+        
+        for number in 1...maxInt {
             // radix?
-            let binaryString = String(randomNumber, radix: 2)
-            
-            // padding the binaryString to make all have 5 digits
+            let binaryString = String(number, radix: 2)
+            // padding the binaryString to make all have 5 digits // consider String initializer as well
             var padded = binaryString
             
             for _ in 0..<(total - binaryString.count) {
                 padded = "0" + padded
             }
-            
             valueArray.append(padded)
         }
     }
