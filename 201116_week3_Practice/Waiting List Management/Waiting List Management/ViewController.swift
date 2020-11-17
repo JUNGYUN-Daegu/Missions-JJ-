@@ -36,14 +36,15 @@ class ViewController: UIViewController {
         
         if myListManager.peopleWaiting == 20 {
             waitBtnStatus.isUserInteractionEnabled = false
-            waitBtnStatus.backgroundColor = UIColor.red
+            // how to change the text color of button?
+            waitBtnStatus.setTitleColor(UIColor.red, for: .normal)
         } else if myListManager.peopleWaiting == 0 {
             completeBtnStatus.isUserInteractionEnabled = false
             completeBtnStatus.backgroundColor = UIColor.red
         } else {
             waitBtnStatus.isUserInteractionEnabled = true
             completeBtnStatus.isUserInteractionEnabled = true
-            waitBtnStatus.backgroundColor = UIColor.white
+            waitBtnStatus.setTitleColor(UIColor.black, for: .normal)
             completeBtnStatus.backgroundColor = UIColor.link
         }
     }
