@@ -8,8 +8,8 @@
 import Foundation
 
 let myBracketStructure = BracketStructure(type: .round)
-
 let generatedBracketSet = myBracketStructure.generate(with: 8)
+
 print(generatedBracketSet)
 
 for everyBracketSet in generatedBracketSet {

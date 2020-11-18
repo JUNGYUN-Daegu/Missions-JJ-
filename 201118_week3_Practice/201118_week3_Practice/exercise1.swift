@@ -38,19 +38,19 @@ struct BracketStructure {
         basicBracketSet.append(String(repeating: closingBracket, count: count/2))
         result.append(basicBracketSet)
         //range로 바꿔보기
-        var rightHandBracketCount = 0
+        var rightHandBracketIndex = 0
         repeat {
             // should not move 0 index bracket
-            for leftHandBracketCount in 1...count/2 - 1 {
+            for leftHandBracketIndex in 1...count/2 - 1 {
                 var tempArray = Array(basicBracketSet)
-                tempArray.swapAt(leftHandBracketCount, count/2 + rightHandBracketCount)
+                tempArray.swapAt(leftHandBracketIndex, count/2 + rightHandBracketIndex)
                 
                 // error without mapping: Referencing instance method 'joined(separator:)' on 'BidirectionalCollection' requires the types 'String.Element' (aka 'Character') and 'String' be equivalent
                 let resultString = tempArray.map { String($0)}.joined()
                 result.append(resultString)
             }
-            rightHandBracketCount += 1
-        } while (rightHandBracketCount < count/2 - 1)
+            rightHandBracketIndex += 1
+        } while (rightHandBracketIndex < count/2 - 1)
         return result
     }
     
