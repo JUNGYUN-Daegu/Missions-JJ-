@@ -18,58 +18,25 @@ class ViewController: UIViewController {
         updateDisplayLabel()
     }
 
-//MARK:- IBAction: Number Buttons Pressed
+//MARK:- IBActions
     @IBAction func numberPressed(_ sender: UIButton) {
         numberEntry(sender)
         updateDisplayLabel()
     }
-//MARK:- IBAction: Operation Button Pressed
+    
     @IBAction func operationBtnPressed(_ sender: UIButton) {
-        myCalculator.displayedNumberStringToDouble()
+        myCalculator.passDisplayedNumberToCurrentNumber()
         myCalculator.stackCurrentNumber()
         myCalculator.stackOperation(input: (sender.title(for: .normal)!))
-        print(myCalculator.stack)
-        print(myCalculator.operationStack)
         myCalculator.displayedNumberString = ""
-        
         updateDisplayLabel()
     }
     
     @IBAction func equalPressed(_ sender: UIButton) {
-        myCalculator.displayedNumberStringToDouble()
+        myCalculator.passDisplayedNumberToCurrentNumber()
         myCalculator.stackCurrentNumber()
-        print(myCalculator.stack)
-        
-        var result: Double = 0.0
-        var operation:(Double, Double) -> Double = (+)
-        
-        for (index, element) in myCalculator.stack.enumerated() {
-            if index == 0 {
-                result += element
-            } else {
-                print(index)
-                switch myCalculator.operationStack[index - 1] {
-                case "+": operation = (+)
-                case "-": operation = (-)
-                case "÷": operation = (/)
-                case "×": operation = (*)
-                default: return
-                }
-                result = operation(result, element)
-            }
-        }
-        
-        if floor(result) == result {
-            myCalculator.displayedNumberString = String(format: "%.0f", result)
-        } else {
-            myCalculator.displayedNumberString = String(result)
-        }
-        
-        print(String(result))
-        myCalculator.number = 0.0
-        myCalculator.stack = []
-        myCalculator.operationStack = []
-    
+        debuggingLabel.text = "숫자 \(myCalculator.stack)과 연산자 \(myCalculator.operationStack) 로 계산"
+        myCalculator.calculation()
         updateDisplayLabel()
     }
     
@@ -81,6 +48,7 @@ class ViewController: UIViewController {
             myCalculator.displayedNumberManipulation(input: sender.title(for: .normal)!)
         }
     }
+    
     func updateDisplayLabel() {
         displayLabel.text = myCalculator.displayedNumberString
     }
@@ -89,7 +57,7 @@ class ViewController: UIViewController {
 //MARK:- Calculating Structure
 struct Calculator {
     var displayedNumberString: String = ""
-    var number: Double = 0
+    var currentNumber: Double = 0
     var stack : Array<Double> = []
     var operationStack: Array<String> = []
     
@@ -98,17 +66,49 @@ struct Calculator {
         displayedNumberString.append(input)
     }
     
-    mutating func displayedNumberStringToDouble() {
+    mutating func passDisplayedNumberToCurrentNumber() {
         if let doubleValue = Double(displayedNumberString) {
-            number = doubleValue
+            currentNumber = doubleValue
         }
     }
     
     mutating func stackCurrentNumber() {
-        stack.append(number)
+        stack.append(currentNumber)
     }
     
     mutating func stackOperation(input: String) {
         operationStack.append(input)
+    }
+    
+    mutating func calculation() {
+        var result: Double = 0.0
+        var operation:(Double, Double) -> Double = (+)
+        
+        for (index, element) in stack.enumerated() {
+            if index == 0 {
+                result += element
+            } else {
+                switch operationStack[index - 1] {
+                case "+": operation = (+)
+                case "-": operation = (-)
+                case "÷": operation = (/)
+                case "×": operation = (*)
+                default: return
+                }
+                result = operation(result, element)
+            }
+        }
+        //end of For-Loop, start displaying numbers
+        
+        if floor(result) == result {
+            displayedNumberString = String(format: "%.0f", result)
+        } else {
+            displayedNumberString = String(result)
+        }
+        
+        // initializing properties
+        currentNumber = 0.0
+        stack = []
+        operationStack = []
     }
 }
