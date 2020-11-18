@@ -42,6 +42,7 @@ struct BracketStructure {
         repeat {
             // should not move 0 index bracket
             for leftHandBracketIndex in 1...count/2 - 1 {
+                // simple feature of Swift: turning String into Array
                 var tempArray = Array(basicBracketSet)
                 tempArray.swapAt(leftHandBracketIndex, count/2 + rightHandBracketIndex)
                 
