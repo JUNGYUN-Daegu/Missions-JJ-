@@ -98,8 +98,8 @@ struct Calculator {
                 result = operation(result, element)
             }
         }
-        //end of For-Loop, start displaying numbers
-        
+        // end of For-Loop, start displaying numbers
+        // get rid of decimal point numbers when not needed
         if floor(result) == result {
             displayedNumberString = String(format: "%.0f", result)
         } else {
@@ -112,3 +112,8 @@ struct Calculator {
         operationStack = []
     }
 }
+
+//MARK:- Issues
+// Shake Gesture로 계산기 초기화 하는 것 구현해보기
+// NumberFormatter로 결과값 포맷팅하기
+// Stack.arrangeSubview 활용해서 스택 관리해보기
