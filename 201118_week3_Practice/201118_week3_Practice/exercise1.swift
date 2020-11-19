@@ -8,7 +8,7 @@
 
 import Foundation
 
-// how to name structure?
+//FIXME:- 5세트 이상에서 모든 경우의 수를 포함하지 않는 로직이다. 로직의 수정 필요
 struct BracketStructure {
     var openingBracket: String
     var closingBracket: String
