@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,365 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_01123_week4_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-BA-qQF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7rf-aA-ikU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오" textAlignment="center" lineBreakMode="wordWrap" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-Jp-ywH">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686274509803" green="0.066666666666666666" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전" textAlignment="center" lineBreakMode="wordWrap" minimumScaleFactor="0.20000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VK9-k6-4vw">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686274509803" green="0.066666666666666666" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후" textAlignment="center" lineBreakMode="wordWrap" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yjh-E0-izK">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686274509803" green="0.066666666666666666" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SW6-XI-EuO">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686274509803" green="0.066666666666666666" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XCK-eD-wjS">
+                                        <rect key="frame" x="0.0" y="91" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="열" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="g95-d0-sov">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="41H-x4-J7Y">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vdm-rv-DxH">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nKI-A3-vVF">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aN0-62-oyG">
+                                        <rect key="frame" x="0.0" y="182" width="414" height="90.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="xbL-OH-gYu">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="57H-Ax-8gU">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A7l-0D-fmn">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="섯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-7f-ndt">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WFG-tT-BuE">
+                                        <rect key="frame" x="0.0" y="272.5" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="Ekn-Wm-OW0">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mb5-FR-bDO">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="996-Zb-UmY">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="덟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-4Y-J63">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gXu-YZ-niY">
+                                        <rect key="frame" x="0.0" y="363.5" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="oVR-ca-xxS">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xPJ-CJ-CiN">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FTD-Q5-uui">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="osh-ik-xVs">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="deO-BN-Adi">
+                                        <rect key="frame" x="0.0" y="454.5" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-eq-jMp">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ykI-l4-wM5">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DCA-MW-jAC">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83s-kA-OLf">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-gw-cwi">
+                                        <rect key="frame" x="0.0" y="545.5" width="414" height="90.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="십" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="eQh-kt-3bN">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-Vp-CJ3">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2UC-Ve-6n4">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nZy-r5-EMf">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="90.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eac-ts-kzz">
+                                        <rect key="frame" x="0.0" y="636" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-9M-Xmd">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-2z-PnW">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="육" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="12n-mi-dvU">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="칠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l0d-IL-Fe9">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YU7-vJ-b2X">
+                                        <rect key="frame" x="0.0" y="727" width="414" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="nwI-LZ-oae">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T48-Ix-MQL">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-j7-zsW">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="91"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PBX-ap-kCx">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="91"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RWx-Lj-LXS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="45.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="jC5-bA-b3C">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="45.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="십" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Maj-Id-um3">
+                                                                <rect key="frame" x="52" y="0.0" width="51.5" height="45.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Voj-4g-fao">
+                                                        <rect key="frame" x="0.0" y="45.5" width="103.5" height="45.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="asd-4c-kxu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="45.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="WZb-1V-wl2">
+                                                                <rect key="frame" x="52" y="0.0" width="51.5" height="45.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                                <color key="textColor" red="0.0039215686269999999" green="0.066666666669999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.38823529411764707" green="0.42745098039215684" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="m4d-BA-qQF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0An-iS-cJA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m4d-BA-qQF" secondAttribute="bottom" id="e4s-1F-7W0"/>
+                            <constraint firstItem="m4d-BA-qQF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iat-bl-Nv5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m4d-BA-qQF" secondAttribute="trailing" id="wJq-4V-3o3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiLbl" destination="osh-ik-xVs" id="Aij-um-96Y"/>
+                        <outlet property="secondLbl" destination="asd-4c-kxu" id="zcp-vs-GZZ"/>
+                        <outlet property="secondTensPlaceLbl" destination="jC5-bA-b3C" id="sDW-Mc-JwX"/>
+                        <outlet property="secondTensPlaceUnitLbl" destination="Maj-Id-um3" id="6X8-Dx-SRK"/>
+                        <outlet property="secondUnitLbl" destination="WZb-1V-wl2" id="RaK-up-TfJ"/>
+                        <outletCollection property="ampmLblCollection" destination="OuB-Jp-ywH" collectionClass="NSMutableArray" id="wsY-K8-TvV"/>
+                        <outletCollection property="ampmLblCollection" destination="VK9-k6-4vw" collectionClass="NSMutableArray" id="usH-Gx-m1L"/>
+                        <outletCollection property="ampmLblCollection" destination="yjh-E0-izK" collectionClass="NSMutableArray" id="NcX-Ha-hNe"/>
+                        <outletCollection property="hourLblCollection" destination="SW6-XI-EuO" collectionClass="NSMutableArray" id="xkr-PR-NDM"/>
+                        <outletCollection property="hourLblCollection" destination="g95-d0-sov" collectionClass="NSMutableArray" id="zca-7I-akq"/>
+                        <outletCollection property="hourLblCollection" destination="41H-x4-J7Y" collectionClass="NSMutableArray" id="RFS-uY-xDC"/>
+                        <outletCollection property="hourLblCollection" destination="Vdm-rv-DxH" collectionClass="NSMutableArray" id="xVe-fd-Vfs"/>
+                        <outletCollection property="hourLblCollection" destination="nKI-A3-vVF" collectionClass="NSMutableArray" id="fhz-mR-ZJ7"/>
+                        <outletCollection property="hourLblCollection" destination="xbL-OH-gYu" collectionClass="NSMutableArray" id="cBg-gt-te8"/>
+                        <outletCollection property="hourLblCollection" destination="57H-Ax-8gU" collectionClass="NSMutableArray" id="rcQ-Jr-Ice"/>
+                        <outletCollection property="hourLblCollection" destination="A7l-0D-fmn" collectionClass="NSMutableArray" id="t8p-uL-KcW"/>
+                        <outletCollection property="hourLblCollection" destination="cbb-7f-ndt" collectionClass="NSMutableArray" id="H19-f6-fbF"/>
+                        <outletCollection property="hourLblCollection" destination="Ekn-Wm-OW0" collectionClass="NSMutableArray" id="WaO-B9-PyQ"/>
+                        <outletCollection property="hourLblCollection" destination="Mb5-FR-bDO" collectionClass="NSMutableArray" id="whe-PV-feU"/>
+                        <outletCollection property="hourLblCollection" destination="oVR-ca-xxS" collectionClass="NSMutableArray" id="ojk-G7-3sd"/>
+                        <outletCollection property="hourLblCollection" destination="xPJ-CJ-CiN" collectionClass="NSMutableArray" id="KdD-4U-OM6"/>
+                        <outletCollection property="unitLblCollection" destination="FTD-Q5-uui" collectionClass="NSMutableArray" id="8hj-oO-d5g"/>
+                        <outletCollection property="unitLblCollection" destination="FH5-j7-zsW" collectionClass="NSMutableArray" id="LHh-IC-mNG"/>
+                        <outletCollection property="minuteTensPlaceLblCollection" destination="g6W-eq-jMp" collectionClass="NSMutableArray" id="ue1-TC-2kA"/>
+                        <outletCollection property="minuteTensPlaceLblCollection" destination="ykI-l4-wM5" collectionClass="NSMutableArray" id="z2Y-Fr-8Vz"/>
+                        <outletCollection property="minuteTensPlaceLblCollection" destination="DCA-MW-jAC" collectionClass="NSMutableArray" id="5aw-uM-7Yb"/>
+                        <outletCollection property="minuteTensPlaceLblCollection" destination="83s-kA-OLf" collectionClass="NSMutableArray" id="h2b-E6-sf5"/>
+                        <outletCollection property="minuteTensPlaceLblCollection" destination="eQh-kt-3bN" collectionClass="NSMutableArray" id="Dxt-c2-LbT"/>
+                        <outletCollection property="minuteLblCollection" destination="pbS-Vp-CJ3" collectionClass="NSMutableArray" id="hig-hr-8cY"/>
+                        <outletCollection property="minuteLblCollection" destination="2UC-Ve-6n4" collectionClass="NSMutableArray" id="b9C-rf-bUU"/>
+                        <outletCollection property="minuteLblCollection" destination="l0d-IL-Fe9" collectionClass="NSMutableArray" id="FZ0-XK-aZP"/>
+                        <outletCollection property="minuteLblCollection" destination="nZy-r5-EMf" collectionClass="NSMutableArray" id="hRq-xe-Dlo"/>
+                        <outletCollection property="minuteLblCollection" destination="ALY-9M-Xmd" collectionClass="NSMutableArray" id="ihU-P4-qoh"/>
+                        <outletCollection property="minuteLblCollection" destination="Dpb-2z-PnW" collectionClass="NSMutableArray" id="LXw-4P-jEa"/>
+                        <outletCollection property="minuteLblCollection" destination="12n-mi-dvU" collectionClass="NSMutableArray" id="65Q-pW-lqF"/>
+                        <outletCollection property="minuteLblCollection" destination="nwI-LZ-oae" collectionClass="NSMutableArray" id="vfP-4a-y1C"/>
+                        <outletCollection property="minuteLblCollection" destination="T48-Ix-MQL" collectionClass="NSMutableArray" id="jsF-M2-vrC"/>
+                        <outletCollection property="hourEightLblCollection" destination="996-Zb-UmY" collectionClass="NSMutableArray" id="m23-W4-AJ2"/>
+                        <outletCollection property="hourEightLblCollection" destination="gwo-4Y-J63" collectionClass="NSMutableArray" id="t6L-Ol-Txb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-96" y="80"/>
         </scene>
     </scenes>
 </document>
