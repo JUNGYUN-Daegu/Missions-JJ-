@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         letterSelected(label:secondTensPlaceUnitLbl)
         letterSelected(label:secondUnitLbl)
         
-        // 비동기로 고쳐보기
+        // timer도 메인스레드에 작업을 올리는 비동기 형식이라고 볼 수 있음. 단 DispatchQueue를 쓰면 좀 더 다양한 기능 가능
         timer.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
             let currentTime = self.calendar.dateComponents([.hour, .minute, .second,], from: Date())
