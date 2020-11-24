@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         letterSelected(label:secondTensPlaceUnitLbl)
         letterSelected(label:secondUnitLbl)
         
+        // 비동기로 고쳐보기
         timer.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
             let currentTime = self.calendar.dateComponents([.hour, .minute, .second,], from: Date())
@@ -68,7 +69,7 @@ class ViewController: UIViewController {
         // MARK:- ampm letter UI update
         if currentHour < 12 {
             for label in ampmLblCollection {
-                if label.text! == "후" {
+                if label.text == "후" {
                     letterDeselected(label: label)
                 } else {
                     letterSelected(label: label)
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
             }
         } else {
             for label in ampmLblCollection {
-                if label.text! == "전" {
+                if label.text == "전" {
                     letterDeselected(label: label)
                 } else {
                     letterSelected(label: label)
@@ -97,7 +98,7 @@ class ViewController: UIViewController {
         switch currentHour % 12 {
         case 0:
             for label in hourLblCollection {
-                if label.text! == "영" {
+                if label.text == "영" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -105,7 +106,7 @@ class ViewController: UIViewController {
             }
         case 1:
             for label in hourLblCollection {
-                if label.text! == "한" {
+                if label.text == "한" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -113,7 +114,7 @@ class ViewController: UIViewController {
             }
         case 2:
             for label in hourLblCollection {
-                if label.text! == "두" {
+                if label.text == "두" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -121,7 +122,7 @@ class ViewController: UIViewController {
             }
         case 3:
             for label in hourLblCollection {
-                if label.text! == "세" {
+                if label.text == "세" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -129,7 +130,7 @@ class ViewController: UIViewController {
             }
         case 4:
             for label in hourLblCollection {
-                if label.text! == "네" {
+                if label.text == "네" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -137,7 +138,7 @@ class ViewController: UIViewController {
             }
         case 5:
             for label in hourLblCollection {
-                if label.text! == "다" || label.text! == "섯" {
+                if label.text == "다" || label.text! == "섯" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -145,7 +146,7 @@ class ViewController: UIViewController {
             }
         case 6:
             for label in hourLblCollection {
-                if label.text! == "여" || label.text! == "섯" {
+                if label.text == "여" || label.text! == "섯" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -153,7 +154,7 @@ class ViewController: UIViewController {
             }
         case 7:
             for label in hourLblCollection {
-                if label.text! == "일" || label.text! == "곱" {
+                if label.text == "일" || label.text! == "곱" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -171,7 +172,7 @@ class ViewController: UIViewController {
                 letterDeselected(label: label)
             }
             for label in hourLblCollection {
-                if label.text! == "아" || label.text! == "홉" {
+                if label.text == "아" || label.text! == "홉" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -179,7 +180,7 @@ class ViewController: UIViewController {
             }
         case 10:
             for label in hourLblCollection {
-                if label.text! == "열" {
+                if label.text == "열" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -187,7 +188,7 @@ class ViewController: UIViewController {
             }
         case 11:
             for label in hourLblCollection {
-                if label.text! == "열" || label.text! == "한" {
+                if label.text == "열" || label.text! == "한" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -204,7 +205,7 @@ class ViewController: UIViewController {
         switch (currentMinute / 10) {
         case 1:
             for label in minuteTensPlaceLblCollection {
-                if label.text! == "십" {
+                if label.text == "십" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -212,7 +213,7 @@ class ViewController: UIViewController {
             }
         case 2:
             for label in minuteTensPlaceLblCollection {
-                if label.text! == "십" || label.text! == "이" {
+                if label.text == "십" || label.text == "이" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -220,7 +221,7 @@ class ViewController: UIViewController {
             }
         case 3:
             for label in minuteTensPlaceLblCollection {
-                if label.text! == "십" || label.text! == "삼" {
+                if label.text == "십" || label.text == "삼" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -228,7 +229,7 @@ class ViewController: UIViewController {
             }
         case 4:
             for label in minuteTensPlaceLblCollection {
-                if label.text! == "십" || label.text! == "사" {
+                if label.text == "십" || label.text == "사" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -236,7 +237,7 @@ class ViewController: UIViewController {
             }
         case 5:
             for label in minuteTensPlaceLblCollection {
-                if label.text! == "십" || label.text! == "오" {
+                if label.text == "십" || label.text == "오" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -252,7 +253,7 @@ class ViewController: UIViewController {
         switch currentMinute % 10 {
         case 1:
             for label in minuteLblCollection {
-                if label.text! == "일" {
+                if label.text == "일" {
                     letterSelected(label: label)
                 } else {
                     letterDeselected(label: label)
@@ -366,17 +367,17 @@ class ViewController: UIViewController {
         case 3:
             secondLbl.text = "삼"
         case 4:
-            secondLbl.text! = "사"
+            secondLbl.text = "사"
         case 5:
-            secondLbl.text! = "오"
+            secondLbl.text = "오"
         case 6:
-            secondLbl.text! = "육"
+            secondLbl.text = "육"
         case 7:
-            secondLbl.text! = "칠"
+            secondLbl.text = "칠"
         case 8:
-            secondLbl.text! = "팔"
+            secondLbl.text = "팔"
         case 9:
-            secondLbl.text! = "구"
+            secondLbl.text = "구"
         default:
             if currentSecond / 10 == 0 {
                 secondLbl.text! = "정"
