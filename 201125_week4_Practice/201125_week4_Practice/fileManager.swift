@@ -39,19 +39,30 @@ func isExist(fileName: String, at path: String) -> Bool {
 }
 //MARK:- Additional Missions
 func sortFiles() -> [String] {
-    var contentOfDirectory: [String] = []
+    var contentOfDirectory: Array<String> = []
     let documentDirectory = fileManager.urls(
         for: .desktopDirectory,
-        in: .userDomainMask)[0].absoluteString
-        
-    do{
-        // return value of 'contentsOfDirectory' can differ from [URL] to [String] following the data annotation of variable 'contentOfDirectory'
-        contentOfDirectory = try fileManager.contentsOfDirectory(atPath: documentDirectory)
+        in: .userDomainMask)[0]
+    var fileURLs: [URL] = []
+    
+    do {
+        fileURLs = try fileManager.contentsOfDirectory(
+            at: documentDirectory,
+            includingPropertiesForKeys: nil,
+            options: [.skipsSubdirectoryDescendants, .skipsHiddenFiles]
+        )
     } catch {
-        print("Error occured")
+        print("Error retrieving URLs")
+    }
+    //file URL to String
+    for url in fileURLs {
+        // url.path: turing URL address into String, if you use absoluteString method, you will get extended string
+        // lastPathComponent: retrieving file name here
+        let temp: String = (url.path as NSString).lastPathComponent
+        contentOfDirectory.append(temp)
     }
     return contentOfDirectory.sorted()
-    }
+}
 
 
 
