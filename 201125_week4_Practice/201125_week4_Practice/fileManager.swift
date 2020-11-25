@@ -37,8 +37,21 @@ func isExist(fileName: String, at path: String) -> Bool {
     }
     return result
 }
-
-
+//MARK:- Additional Missions
+func sortFiles() -> [String] {
+    var contentOfDirectory: [String] = []
+    let documentDirectory = fileManager.urls(
+        for: .desktopDirectory,
+        in: .userDomainMask)[0].absoluteString
+        
+    do{
+        // return value of 'contentsOfDirectory' can differ from [URL] to [String] following the data annotation of variable 'contentOfDirectory'
+        contentOfDirectory = try fileManager.contentsOfDirectory(atPath: documentDirectory)
+    } catch {
+        print("Error occured")
+    }
+    return contentOfDirectory.sorted()
+    }
 
 
 
