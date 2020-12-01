@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIColor {
-    class func splitHexColorCode(hexColorString: String) -> [String]? {
+    static func splitHexColorCode(hexColorString: String) -> [String]? {
         // 문자열을 배열화 하면 문자 배열([Character])이 된다.
         let array = Array<Character>(hexColorString)
         var result = [String]()
@@ -30,13 +30,13 @@ extension UIColor {
             return nil
         }
     }
-    class func hexString2CGFloat(hexString: String) -> CGFloat {
+    static func hexString2CGFloat(hexString: String) -> CGFloat {
            let scanner = Scanner(string: hexString)
            var intValue: UInt64 = 0
            scanner.scanHexInt64(&intValue)
            return CGFloat(CGFloat(intValue) / 255.0)
     }
-    class func hexString2UIColor(hexString: String) -> UIColor? {
+    static func hexString2UIColor(hexString: String) -> UIColor? {
         if let hexStrings = splitHexColorCode(hexColorString: hexString) {
             let r = hexString2CGFloat(hexString: hexStrings[1])
             let g = hexString2CGFloat(hexString: hexStrings[2])

@@ -14,6 +14,8 @@
 		88C11BCD257498B2007B487B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C11BCC257498B2007B487B /* Assets.xcassets */; };
 		88C11BD0257498B2007B487B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C11BCE257498B2007B487B /* LaunchScreen.storyboard */; };
 		88C11BDB25749B86007B487B /* HexCodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BDA25749B86007B487B /* HexCodeConverter.swift */; };
+		88C11BE12574D21E007B487B /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BE02574D21E007B487B /* Emitter.swift */; };
+		88C11BE525761C8C007B487B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BE425761C8C007B487B /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		88C11BCF257498B2007B487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C11BD1257498B2007B487B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88C11BDA25749B86007B487B /* HexCodeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCodeConverter.swift; sourceTree = "<group>"; };
+		88C11BE02574D21E007B487B /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		88C11BE425761C8C007B487B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		88C11BD825749B5B007B487B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88C11BE425761C8C007B487B /* WelcomeViewController.swift */,
 				88C11BC7257498B1007B487B /* ViewController.swift */,
 			);
 			path = Controller;
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				88C11BDA25749B86007B487B /* HexCodeConverter.swift */,
+				88C11BE02574D21E007B487B /* Emitter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 				88C11BC8257498B1007B487B /* ViewController.swift in Sources */,
 				88C11BDB25749B86007B487B /* HexCodeConverter.swift in Sources */,
 				88C11BC4257498B1007B487B /* AppDelegate.swift in Sources */,
+				88C11BE525761C8C007B487B /* WelcomeViewController.swift in Sources */,
+				88C11BE12574D21E007B487B /* Emitter.swift in Sources */,
 				88C11BC6257498B1007B487B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
