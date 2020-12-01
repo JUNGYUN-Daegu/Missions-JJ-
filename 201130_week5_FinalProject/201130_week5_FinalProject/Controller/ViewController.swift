@@ -21,8 +21,11 @@ class ViewController: UIViewController {
         emitterLayer.emitterPosition = CGPoint(x: view.frame.width/2, y: 50)
         // setting the size of emitter
         emitterLayer.emitterSize = CGSize(width: view.frame.width, height: 1)
-       
         view.layer.addSublayer(emitterLayer)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 

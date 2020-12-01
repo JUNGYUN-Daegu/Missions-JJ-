@@ -16,13 +16,13 @@ class WelcomeViewController: UIViewController {
         button.setTitle("LET IT SNOW", for: .normal)
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(letItSnow), for: .touchUpInside)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.hexString2UIColor(hexString: "#ffdada")
-        
         view.addSubview(centerButton)
         centerButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         centerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -30,7 +30,13 @@ class WelcomeViewController: UIViewController {
         centerButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
     
+    @objc func letItSnow() {
+        self.performSegue(withIdentifier: "onlySegue", sender: self)
+    }
 }
 
 //FIXME:- 버튼 눌리면 중앙에서부터 "#31326f"컬러 확장되게 만들기
