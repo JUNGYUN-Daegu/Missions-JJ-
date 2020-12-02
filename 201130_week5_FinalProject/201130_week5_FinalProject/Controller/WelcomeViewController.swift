@@ -17,12 +17,15 @@ class WelcomeViewController: UIViewController {
         label.textAlignment = .center
         label.textColor = UIColor.white
         return label
+    
     }()
     
     let centerButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.hexString2UIColor(hexString: "#ffdada")
+        button.setTitle("LET US SNOW", for: .normal)
+        button.tintColor = UIColor.hexString2UIColor(hexString: "#31326f")
         return button
     }()
     
@@ -44,8 +47,6 @@ class WelcomeViewController: UIViewController {
         centerButton.layer.cornerRadius = view.frame.height / 20
         centerButton.clipsToBounds = true
         centerButton.titleLabel?.font = UIFont(name: "Nerko One", size: view.frame.height / 30)
-        centerButton.setTitle("LET US SNOW", for: .normal)
-        centerButton.tintColor = UIColor.hexString2UIColor(hexString: "#31326f")
         centerButton.addTarget(self, action: #selector(letItSnow), for: .touchUpInside)
     }
     
