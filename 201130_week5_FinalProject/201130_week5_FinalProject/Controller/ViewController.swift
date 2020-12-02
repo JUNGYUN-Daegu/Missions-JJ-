@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let snowIcon = UIImage(systemName: "snow")
+    var variableIcon = UIImage(named: "star")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +18,17 @@ class ViewController: UIViewController {
     }
     
     func setupEmitter() {
-        let emitterLayer = Emitter.get()
+        
+        let emitterLayer = Emitter.get(icon1: snowIcon!, icon2: variableIcon ?? UIImage(named: "star")!)
         // setting the center of emitter
         emitterLayer.emitterPosition = CGPoint(x: view.frame.width/2, y: 50)
         // setting the size of emitter
         emitterLayer.emitterSize = CGSize(width: view.frame.width, height: 1)
         view.layer.addSublayer(emitterLayer)
+    }
+    
+    func menuButtonPressed() {
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

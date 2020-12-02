@@ -16,6 +16,7 @@
 		88C11BDB25749B86007B487B /* HexCodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BDA25749B86007B487B /* HexCodeConverter.swift */; };
 		88C11BE12574D21E007B487B /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BE02574D21E007B487B /* Emitter.swift */; };
 		88C11BE525761C8C007B487B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BE425761C8C007B487B /* WelcomeViewController.swift */; };
+		88C11BEE25763603007B487B /* NerkoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88C11BEB257635EC007B487B /* NerkoOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		88C11BDA25749B86007B487B /* HexCodeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCodeConverter.swift; sourceTree = "<group>"; };
 		88C11BE02574D21E007B487B /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
 		88C11BE425761C8C007B487B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		88C11BEB257635EC007B487B /* NerkoOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NerkoOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				88C11BCC257498B2007B487B /* Assets.xcassets */,
 				88C11BCE257498B2007B487B /* LaunchScreen.storyboard */,
 				88C11BD1257498B2007B487B /* Info.plist */,
+				88C11BEB257635EC007B487B /* NerkoOne-Regular.ttf */,
 			);
 			path = 201130_week5_FinalProject;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C11BEE25763603007B487B /* NerkoOne-Regular.ttf in Resources */,
 				88C11BD0257498B2007B487B /* LaunchScreen.storyboard in Resources */,
 				88C11BCD257498B2007B487B /* Assets.xcassets in Resources */,
 				88C11BCB257498B1007B487B /* Main.storyboard in Resources */,
