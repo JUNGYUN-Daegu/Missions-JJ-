@@ -56,20 +56,16 @@ class SnowEmitter {
         
         let cell3 = CAEmitterCell()
         cell3.contents = icon2.cgImage
-        cell3.birthRate = 0.3
-        cell3.lifetime = 10
+        cell3.birthRate = 0.5
+        cell3.lifetime = 15
         cell3.velocity = CGFloat(100)
         cell3.emissionLongitude = (180 * (.pi/180))
         cell3.emissionRange = (45 * (.pi/180))
-        cell3.scale = 0.03
+        cell3.scale = 0.06
         cell3.spinRange = 2
         cells.append(cell3)
         
         return cells
-    }
-    
-    func remove() {
-        emitter.removeFromSuperlayer()
     }
 }
 

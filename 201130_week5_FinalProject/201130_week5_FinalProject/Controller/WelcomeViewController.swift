@@ -9,8 +9,6 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    let searchManager = SearchManager()
-    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
