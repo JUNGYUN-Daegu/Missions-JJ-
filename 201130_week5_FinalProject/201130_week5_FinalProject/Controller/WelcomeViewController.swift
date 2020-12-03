@@ -8,7 +8,6 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -18,7 +17,6 @@ class WelcomeViewController: UIViewController {
         label.textAlignment = .center
         label.textColor = UIColor.white
         return label
-    
     }()
     
     let centerButton: UIButton = {
@@ -32,7 +30,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor.hexString2UIColor(hexString: "#31326f")
         
         view.addSubview(titleLabel)
@@ -60,5 +57,3 @@ class WelcomeViewController: UIViewController {
         self.performSegue(withIdentifier: "onlySegue", sender: self)
     }
 }
-
-//FIXME:- 버튼 눌리면 중앙에서부터 "#31326f"컬러 확장되게 만들기

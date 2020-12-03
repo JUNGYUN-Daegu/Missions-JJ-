@@ -19,18 +19,29 @@ class ViewController: UIViewController {
     
     let jsonDecoder = JSONDecoder()
     //MARK: - UI Properties
-    let foodImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "snow")
-        return imageView
+    let recommendationLabel: UILabel = {
+        let label = UILabel()
+         label.translatesAutoresizingMaskIntoConstraints = false
+         label.text = "네이버 추천 맛집"
+         label.backgroundColor = UIColor.hexString2UIColor(hexString: "#9ddfd3")
+         label.numberOfLines = 0
+         label.textAlignment = .center
+         label.textColor = UIColor.hexString2UIColor(hexString: "#31326f")
+         label.font = UIFont(name: "Hi Melody", size: 20)
+         label.layer.cornerRadius = 10
+         label.clipsToBounds = true
+         return label
     }()
     
     let titleLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "testTitle"
-        label.backgroundColor = UIColor.hexString2UIColor(hexString: "#dbf6e9")
+//        label.backgroundColor = UIColor.hexString2UIColor(hexString: "#ffdada")
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = UIColor.hexString2UIColor(hexString: "#9ddfd3")
+        label.font = UIFont(name: "Hi Melody", size: 22)
         return label
     }()
     
@@ -38,7 +49,11 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "testAddress"
-        label.backgroundColor = UIColor.hexString2UIColor(hexString: "#dbf6e9")
+//        label.backgroundColor = UIColor.hexString2UIColor(hexString: "#ffdada")
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = UIColor.hexString2UIColor(hexString: "#9ddfd3")
+        label.font = UIFont(name: "Hi Melody", size: 22)
         return label
     }()
     
@@ -46,69 +61,69 @@ class ViewController: UIViewController {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.white
-        label.font = UIFont(name: "Nerko One", size: 100)
         label.adjustsFontSizeToFitWidth = true
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.text = "test"
+        label.font = UIFont(name: "Hi Melody", size: 40)
         return label
     }()
     
     let menuSelectBtn: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.hexString2UIColor(hexString: "#ffdada")
+        button.setTitle("SELECT", for: .normal)
+        button.tintColor = UIColor.hexString2UIColor(hexString: "#31326f")
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
-        button.setTitle("SELECT", for: .normal)
         return button
     }()
     
     let backBtn: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.hexString2UIColor(hexString: "#ffdada")
         button.setTitle("BACK", for: .normal)
+        button.tintColor = UIColor.hexString2UIColor(hexString: "#31326f")
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
-        //FIXME:- how to set text color of button?
         return button
     }()
+    
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.hexString2UIColor(hexString: "#31326f")
         
-        view.addSubview(foodImageView)
-        foodImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        foodImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.2).isActive = true
-        foodImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3).isActive = true
-        foodImageView.heightAnchor.constraint(equalTo: foodImageView.widthAnchor, multiplier: 1).isActive = true
-        foodImageView.isHidden = true
+        view.addSubview(menuLabel)
+        menuLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        menuLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        menuLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
+        menuLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
+        menuLabel.isHidden = true
         
+        view.addSubview(recommendationLabel)
+        recommendationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        recommendationLabel.topAnchor.constraint(equalTo: menuLabel.bottomAnchor, constant: view.frame.height * 0.01).isActive = true
+        recommendationLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
+        recommendationLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
+        recommendationLabel.isHidden = true
         
         view.addSubview(titleLabel)
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: foodImageView.bottomAnchor, constant: 10).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: recommendationLabel.bottomAnchor, constant: 10).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
-        titleLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
-        titleLabel.layer.cornerRadius = view.frame.height / 30
+//        titleLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05).isActive = true
         titleLabel.isHidden = true
         
         view.addSubview(addressLabel)
         addressLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         addressLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
         addressLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
-        addressLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
-        addressLabel.layer.cornerRadius = view.frame.height / 30
+//        addressLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05).isActive = true
         addressLabel.isHidden = true
     
-        view.addSubview(menuLabel)
-        menuLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        menuLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
-        menuLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4).isActive = true
-        menuLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
-        menuLabel.isHidden = true
         
         view.addSubview(menuSelectBtn)
         menuSelectBtn.rightAnchor.constraint(equalTo: view.centerXAnchor, constant: -10).isActive = true
@@ -127,9 +142,8 @@ class ViewController: UIViewController {
         backBtn.addTarget(self, action: #selector(backBtnPressed), for: .touchUpInside)
        
         setupSnowEmitter(snowIcon: snowIcon!, starIcon: starIcon!)
-    
     }
-    
+    //MARK:- Functions
     func setupSnowEmitter(snowIcon: UIImage, starIcon: UIImage) {
         let emitterLayer = snowEmitter.get(icon1: snowIcon, icon2: starIcon)
         // setting the center of emitter
@@ -142,32 +156,39 @@ class ViewController: UIViewController {
     @objc func menuSelectBtnPressed() {
         snowEmitter.emitter.transform = CATransform3DMakeScale(1.2, 1.2, 1.0)
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (_) in
+            // though you remove the layer, value of layer remains. so needed to trasform back
             self.snowEmitter.emitter.removeFromSuperlayer()
             self.snowEmitter.emitter.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
         }
         
-        let randomFood: String = foodItems.randomElement()!
-        menuLabel.text = randomFood
+        let randomFood: String = foodItems.randomElement() ?? "치킨"
         requestAPI(foodName: randomFood)
-        menuLabel.isHidden = false
-        titleLabel.isHidden = false
-        addressLabel.isHidden = false
         if randomFood == "치킨" {
-            self.starIcon = UIImage(named: "fried-chicken")
-            //["치킨","스시","피자","햄버거","떡볶이","케이크"]
+            starIcon = UIImage(named: "fried-chicken")
+            menuLabel.text = "역시 오늘 같은 날은 치킨일까?"
         } else if randomFood == "스시" {
-            self.starIcon = UIImage(named: "sushi")
+            starIcon = UIImage(named: "sushi")
+            menuLabel.text = "한국에서 먹는 스시, 오히려 좋아"
         } else if randomFood == "피자" {
-            self.starIcon = UIImage(named: "pizza")
+            starIcon = UIImage(named: "pizza")
+            menuLabel.text = "피자먹고 우리 인상 피자"
         } else if randomFood == "햄버거" {
-            self.starIcon = UIImage(named: "hamburger")
+            starIcon = UIImage(named: "hamburger")
+            menuLabel.text = "햄버거를 먹으면 좋은 디버거가 될 수 있을지도..?"
         } else if randomFood == "떡볶이" {
-            self.starIcon = UIImage(named: "bokki")
+            starIcon = UIImage(named: "bokki")
+            menuLabel.text = "오늘은 떡볶이 먹고 벌크업을..."
         } else if randomFood == "케이크" {
-            self.starIcon = UIImage(named: "cake")
+            starIcon = UIImage(named: "cake")
+            menuLabel.text = "메리 크리스마스"
         } else {
             self.starIcon = UIImage(named: "star")
         }
+        menuLabel.isHidden = false
+        titleLabel.isHidden = false
+        addressLabel.isHidden = false
+        recommendationLabel.isHidden = false
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.setupSnowEmitter(snowIcon: self.snowIcon!, starIcon: self.starIcon!)
         }
@@ -177,15 +198,16 @@ class ViewController: UIViewController {
         dismiss(animated: true)
     }
     
-//MARK:- API Functions
+    //MARK:- API Functions
     func urlTaskDone() {
-            let item = dataManager.shared.searchResult?.items[0]
-            do {
-                OperationQueue.main.addOperation {
-                    self.titleLabel.text = item?.title
-                    self.addressLabel.text = item?.roadAddress
-                }
+        let item = dataManager.shared.searchResult?.items[0]
+        
+        do {
+            OperationQueue.main.addOperation {
+                self.titleLabel.text = item?.title.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: "")
+                self.addressLabel.text = item?.roadAddress
             }
+        }
     }
     
     func requestAPI(foodName: String) {

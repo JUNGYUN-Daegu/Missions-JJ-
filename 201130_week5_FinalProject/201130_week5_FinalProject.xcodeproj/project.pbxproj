@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8818A2A125788DD900EFE4B5 /* dataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818A2A025788DD900EFE4B5 /* dataStore.swift */; };
+		8818A2AA2578CD0900EFE4B5 /* HiMelody-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8818A2A92578CD0900EFE4B5 /* HiMelody-Regular.ttf */; };
 		88C11BC4257498B1007B487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BC3257498B1007B487B /* AppDelegate.swift */; };
 		88C11BC6257498B1007B487B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BC5257498B1007B487B /* SceneDelegate.swift */; };
 		88C11BC8257498B1007B487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C11BC7257498B1007B487B /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		8818A2A025788DD900EFE4B5 /* dataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStore.swift; sourceTree = "<group>"; };
+		8818A2A92578CD0900EFE4B5 /* HiMelody-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HiMelody-Regular.ttf"; sourceTree = "<group>"; };
 		88C11BC0257498B1007B487B /* 201130_week5_FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 201130_week5_FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C11BC3257498B1007B487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C11BC5257498B1007B487B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				88C11BCE257498B2007B487B /* LaunchScreen.storyboard */,
 				88C11BD1257498B2007B487B /* Info.plist */,
 				88C11BEB257635EC007B487B /* NerkoOne-Regular.ttf */,
+				8818A2A92578CD0900EFE4B5 /* HiMelody-Regular.ttf */,
 			);
 			path = 201130_week5_FinalProject;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C11BEE25763603007B487B /* NerkoOne-Regular.ttf in Resources */,
+				8818A2AA2578CD0900EFE4B5 /* HiMelody-Regular.ttf in Resources */,
 				88C11BD0257498B2007B487B /* LaunchScreen.storyboard in Resources */,
 				88C11BCD257498B2007B487B /* Assets.xcassets in Resources */,
 				88C11BCB257498B1007B487B /* Main.storyboard in Resources */,
