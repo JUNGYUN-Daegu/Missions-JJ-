@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     let starIcon = UIImage(named: "star")
     let foodItems = ["치킨","스시","피자","햄버거","떡볶이"]
     
-    
+    let searchManager = SearchManager()
     //MARK: - UI Properties
     let foodImageView: UIImageView = {
         let imageView = UIImageView()
@@ -144,6 +144,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.setupSnowEmitter(variableIcon: self.variableIcon!, starIcon: self.starIcon!)
         }
+        searchManager.fetchSearchData(foodName:"sushi")
         
         menuLabel.text = foodItems.randomElement()
         menuLabel.isHidden = false
@@ -165,3 +166,11 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: SearchManagerDelegate {
+    func didResultUpdate(searchManager: SearchManager, searchResult: ResultModel) {
+        DispatchQueue.main.async {
+        self.titleLabel.text = searchResult.title
+        self.addressLabel.text = searchResult.roadAddress
+        }
+    }
+}

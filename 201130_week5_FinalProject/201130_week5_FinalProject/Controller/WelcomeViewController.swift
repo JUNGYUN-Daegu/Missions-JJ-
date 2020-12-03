@@ -8,6 +8,9 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    let searchManager = SearchManager()
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +34,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = UIColor.hexString2UIColor(hexString: "#31326f")
         
         view.addSubview(titleLabel)
