@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class WelcomeViewController: UIViewController {
+    var backGroundPlayer = AVAudioPlayer()
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +50,8 @@ class WelcomeViewController: UIViewController {
         centerButton.clipsToBounds = true
         centerButton.titleLabel?.font = UIFont(name: "Nerko One", size: view.frame.height / 30)
         centerButton.addTarget(self, action: #selector(letItSnow), for: .touchUpInside)
+        
+        playBackgroundMusic(fileNamed: "christmasMusic.mp3")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -55,5 +60,21 @@ class WelcomeViewController: UIViewController {
     
     @objc func letItSnow() {
         self.performSegue(withIdentifier: "onlySegue", sender: self)
+    }
+    
+    func playBackgroundMusic(fileNamed: String) {
+        let url = Bundle.main.url(forResource: fileNamed, withExtension: nil)
+        guard let safeUrl = url else {
+            print("file not found")
+            return
+        }
+        do{
+            backGroundPlayer = try AVAudioPlayer(contentsOf: safeUrl)
+            backGroundPlayer.numberOfLoops = -1
+            backGroundPlayer.prepareToPlay()
+            backGroundPlayer.play()
+        } catch {
+            print(error)
+        }
     }
 }
