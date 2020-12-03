@@ -9,8 +9,9 @@ import UIKit
 
 // reusables
 class SnowEmitter {
+    let emitter = CAEmitterLayer()
+    
     func get(icon1: UIImage, icon2: UIImage) -> CAEmitterLayer {
-        let emitter = CAEmitterLayer()
         // default: a dot spreading cells to all directions.
         emitter.emitterShape = .line
         emitter.emitterCells = generateEmitterCells(icon1, icon2)
@@ -42,7 +43,7 @@ class SnowEmitter {
         let cell2 = CAEmitterCell()
         cell2.contents = icon1.cgImage
         cell2.birthRate = 0.5
-        cell2.lifetime = 50
+        cell2.lifetime = 60
         cell2.velocity = CGFloat(20)
         cell2.emissionLongitude = (180 * (.pi/180))
         cell2.emissionRange = (45 * (.pi/180))
@@ -55,7 +56,7 @@ class SnowEmitter {
         
         let cell3 = CAEmitterCell()
         cell3.contents = icon2.cgImage
-        cell3.birthRate = 0.5
+        cell3.birthRate = 0.3
         cell3.lifetime = 10
         cell3.velocity = CGFloat(100)
         cell3.emissionLongitude = (180 * (.pi/180))
@@ -65,6 +66,10 @@ class SnowEmitter {
         cells.append(cell3)
         
         return cells
+    }
+    
+    func remove() {
+        emitter.removeFromSuperlayer()
     }
 }
 
