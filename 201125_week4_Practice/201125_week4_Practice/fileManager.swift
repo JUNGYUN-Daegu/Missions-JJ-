@@ -40,6 +40,7 @@ func isExist(fileName: String, at path: String) -> Bool {
 //MARK:- Additional Missions
 func sortFiles() -> [String] {
     var contentOfDirectory: Array<String> = []
+    // safe and fast approach than path String since these enumberated elements(commonly used default address?) are specified in advance
     let documentDirectory = fileManager.urls(
         for: .desktopDirectory,
         in: .userDomainMask)[0]

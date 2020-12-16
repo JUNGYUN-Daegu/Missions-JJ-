@@ -7,8 +7,10 @@
 
 import Foundation
 
-let locationPath: String = "/Users/jojung-yun/Desktop"
+//let locationPath: String = "/Users/jojung-yun/Desktop"
+//
+//print(files(at: locationPath))
+//print(isExist(fileName: "CodeSquad", at: locationPath))
+//print(sortFiles())
 
-print(files(at: locationPath))
-print(isExist(fileName: "CodeSquad", at: locationPath))
-print(sortFiles())
+readDataFromCSV()
