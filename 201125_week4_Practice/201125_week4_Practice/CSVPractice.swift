@@ -8,14 +8,20 @@
 import Foundation
 
 func readDataFromCSV() {
-    guard let filePath = Bundle.main.path(forResource: "csv", ofType: "csv") else {
-        return
-    }
+    let desktopDirectory = fileManager.urls(for: .desktopDirectory, in: .userDomainMask)[0]
+    print(desktopDirectory)
+    
     do {
-        var contents = 
-        return contents
+        let filePath = try fileManager.contentsOfDirectory(at: desktopDirectory, includingPropertiesForKeys: .none, options: .skipsHiddenFiles)
     } catch {
-        
+        print ("error")
     }
+    
+    // it has been actually so easy to convert url into string. You just put url into parenthesis.
+    let targetedFilePath = "\(desktopDirectory)csv.csv"
+    print(targetedFilePath)
+
+    // but this time, String method require me to put URl type argument. then how can I get speicific file's url?
+    var content = String(contentsOf: targetedFilePath, encoding: .utf8)
     
 }
