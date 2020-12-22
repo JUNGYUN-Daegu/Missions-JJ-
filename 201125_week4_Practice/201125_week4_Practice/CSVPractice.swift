@@ -11,17 +11,21 @@ func readDataFromCSV() {
     let desktopDirectory = fileManager.urls(for: .desktopDirectory, in: .userDomainMask)[0]
     print(desktopDirectory)
     
-    do {
-        let filePath = try fileManager.contentsOfDirectory(at: desktopDirectory, includingPropertiesForKeys: .none, options: .skipsHiddenFiles)
-    } catch {
-        print ("error")
-    }
+//    do {
+//        let filePath = try fileManager.contentsOfDirectory(at: desktopDirectory, includingPropertiesForKeys: .none, options: .skipsHiddenFiles)
+//    } catch {
+//        print ("error")
+//    }
     
-    // it has been actually so easy to convert url into string. You just put url into parenthesis.
-    let targetedFilePath = "\(desktopDirectory)csv.csv"
+    // appendingPathComponent 기억하기: URL에 path component 추가
+    let targetedFilePath = desktopDirectory.appendingPathComponent("csv.csv")
     print(targetedFilePath)
-
-    // but this time, String method require me to put URl type argument. then how can I get speicific file's url?
-    var content = String(contentsOf: targetedFilePath, encoding: .utf8)
     
+    do {
+        let contents = try String(contentsOf: targetedFilePath, encoding: .utf8)
+        print(contents)
+        } catch {
+        /* error handling here */
+        }
 }
+
