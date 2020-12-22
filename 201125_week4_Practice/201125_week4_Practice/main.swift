@@ -12,5 +12,4 @@ import Foundation
 //print(files(at: locationPath))
 //print(isExist(fileName: "CodeSquad", at: locationPath))
 //print(sortFiles())
-
 readDataFromCSV()
