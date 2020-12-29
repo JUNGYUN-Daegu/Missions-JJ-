@@ -9,28 +9,33 @@ import Foundation
 
 // Bubble Sort
 class BubbleSort {
-    private var myArray: Array<Int>
+    var myArray: Array<Int>
     
     init(numberArray: Array<Int>) {
         self.myArray = numberArray
     }
     
-    func sorted(isAscending: Bool) -> Array<Int> {
-        var sortedArray = myArray
-        var swapped = false
+    func sorted(isAscending: Bool) {
         
-        //FIXME:- logic ...
-        for (index, value) in 0..<myArray.count - 1 {
+        for i in 0...myArray.count - 2 {
+            for j in i + 1...myArray.count - 1 {
+                if isAscending == true {
+                    if myArray[i] > myArray[j] {
+                            swapped(firstIndex: i, secondIndex: j)
+                    }
+                } else {
+                    if myArray[i] < myArray[j] {
+                            swapped(firstIndex: i, secondIndex: j)
+                    }
+                }
+            }
         }
-        
-        return sortedArray
     }
     
-    // inout: need the updated values to be available after the function call
-    func swap(tempArray: inout Array<Int>, aIndex: Int, bIndex: Int) {
-        var temp = tempArray[aIndex]
-        tempArray[aIndex] = tempArray[bIndex]
-        tempArray[bIndex] = temp
-        
+    func swapped(firstIndex: Int, secondIndex: Int) {
+        var temp = 0
+        temp = myArray[firstIndex]
+        myArray[firstIndex] = myArray[secondIndex]
+        myArray[secondIndex] = temp
     }
 }

@@ -23,3 +23,7 @@ import Foundation
 //print(mySpecialBinaryNumber.find(by: 3))
 
 //MARK:- EXERCISE 3
+var myBubbleSort = BubbleSort(numberArray: [10,7,5,4,3,2,6,1,8,9])
+myBubbleSort.sorted(isAscending: false)
+print(myBubbleSort.myArray)
+

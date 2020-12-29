@@ -10,6 +10,7 @@
 		88730477256212E20079DDDD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88730476256212E20079DDDD /* main.swift */; };
 		8873047F256213310079DDDD /* exercise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873047E256213310079DDDD /* exercise1.swift */; };
 		88730482256222A10079DDDD /* exercise2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88730481256222A10079DDDD /* exercise2.swift */; };
+		887304852562480C0079DDDD /* exercise3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887304842562480C0079DDDD /* exercise3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		88730476256212E20079DDDD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8873047E256213310079DDDD /* exercise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise1.swift; sourceTree = "<group>"; };
 		88730481256222A10079DDDD /* exercise2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise2.swift; sourceTree = "<group>"; };
+		887304842562480C0079DDDD /* exercise3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				88730476256212E20079DDDD /* main.swift */,
 				8873047E256213310079DDDD /* exercise1.swift */,
 				88730481256222A10079DDDD /* exercise2.swift */,
+				887304842562480C0079DDDD /* exercise3.swift */,
 			);
 			path = 201116_week3_Practice;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88730477256212E20079DDDD /* main.swift in Sources */,
+				887304852562480C0079DDDD /* exercise3.swift in Sources */,
 				8873047F256213310079DDDD /* exercise1.swift in Sources */,
 				88730482256222A10079DDDD /* exercise2.swift in Sources */,
 			);
