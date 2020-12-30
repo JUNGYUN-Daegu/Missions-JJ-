@@ -22,14 +22,28 @@ import Foundation
 //print("Your Password's level is : \(passwordValidator(password: "a;lskdfj123+"))")
 
 //MARK:- EXERCISE 4
-if validResidentRegistrationNumber() == true {
-    print("Valid ID")
-} else {
-    print("False ID")
-}
+//if validResidentRegistrationNumber() == true {
+//    print("Valid ID")
+//} else {
+//    print("False ID")
+//}
 
 //MARK:- EXERCISE 5
 
+func myAntArray(_ times: Int) -> Array<Int> {
+    var result: Array<Int> = []
+    
+    if times == 1 {
+        result = [1]
+        print (result)
+    } else if times > 1 {
+        result = antFunction(inputArray: myAntArray(times - 1))
+        print(result)
+    }
+    return result
+}
+
+myAntArray(1)
 
 //MARK:- EXERCISE 6
 //let myDuplicatedWords = duplicatedWords(inputWords: ["가을", "너굴", "우주", "겨울", "봄봄", "여울","여울","여울","여울"])
